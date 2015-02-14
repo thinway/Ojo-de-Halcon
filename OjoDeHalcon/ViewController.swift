@@ -9,7 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    var valorActual: Int = 50
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,13 +22,19 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showAlert() {
-        let alert = UIAlertController(title: "Hola K Ase", message: "Mi primer botón funcionando", preferredStyle: .Alert)
+        let message = "El valor del slide es: \(valorActual)"
         
-        let action = UIAlertAction(title: "Alucina!!!", style: .Default, handler: nil)
+        let alert = UIAlertController(title: "Hola K Ase", message: message, preferredStyle: .Alert)
+        
+        let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
         
         alert.addAction(action)
         
         presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func sliderMoved(slider: UISlider) {
+        valorActual = lroundf(slider.value)
     }
 }
 
