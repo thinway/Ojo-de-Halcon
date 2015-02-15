@@ -9,11 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var valorActual: Int = 0
-    var valorGenerado: Int = 0
+    var valorActual = 0
+    var valorGenerado = 0
+    var puntuacion = 0
+    var ronda = 0
     
     @IBOutlet weak var valorLabel: UILabel!
     @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var puntuacionLabel: UILabel!
+    @IBOutlet weak var rondaLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +32,16 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showAlert() {
-        let message = "El valor del slide es: \(valorActual)"
-            + "\nEl valor generado es: \(valorGenerado)"
+        let diferencia = abs(valorGenerado - valorActual)
+        let puntos = 100 - diferencia
+        
+        puntuacion += puntos
+        
+        let message = "Has conseguido \(puntos) puntos."
+        
+//        let message = "El valor del slide es: \(valorActual)"
+//            + "\nEl valor generado es: \(valorGenerado)"
+//            + "\nLa diferencia es \(diferencia)"
         
         let alert = UIAlertController(title: "Hola K Ase", message: message, preferredStyle: .Alert)
         
@@ -48,6 +60,7 @@ class ViewController: UIViewController {
     }
     
     func iniciarNuevaRonda() {
+        ronda += 1
         valorGenerado = 1 + Int(arc4random_uniform(100))
         //valorActual = 50
         slider.value = Float(valorActual)
@@ -55,6 +68,8 @@ class ViewController: UIViewController {
     
     func actualizarLabels() {
         valorLabel.text = String(valorGenerado)
+        puntuacionLabel.text = String(puntuacion);
+        rondaLabel.text = String(ronda)
     }
 }
 
