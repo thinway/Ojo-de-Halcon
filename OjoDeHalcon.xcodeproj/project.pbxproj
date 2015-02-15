@@ -13,6 +13,7 @@
 		3254022D1A8FA33A000381D3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3254022C1A8FA33A000381D3 /* Images.xcassets */; };
 		325402301A8FA33A000381D3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3254022E1A8FA33A000381D3 /* LaunchScreen.xib */; };
 		3254023C1A8FA33A000381D3 /* OjoDeHalconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3254023B1A8FA33A000381D3 /* OjoDeHalconTests.swift */; };
+		325402461A90C5B9000381D3 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325402451A90C5B9000381D3 /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		325402351A8FA33A000381D3 /* OjoDeHalconTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OjoDeHalconTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3254023A1A8FA33A000381D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3254023B1A8FA33A000381D3 /* OjoDeHalconTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OjoDeHalconTests.swift; sourceTree = "<group>"; };
+		325402451A90C5B9000381D3 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				325402251A8FA33A000381D3 /* AppDelegate.swift */,
 				325402271A8FA33A000381D3 /* ViewController.swift */,
 				325402291A8FA33A000381D3 /* Main.storyboard */,
+				325402451A90C5B9000381D3 /* InfoViewController.swift */,
 				3254022C1A8FA33A000381D3 /* Images.xcassets */,
 				3254022E1A8FA33A000381D3 /* LaunchScreen.xib */,
 				325402231A8FA33A000381D3 /* Supporting Files */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				325402281A8FA33A000381D3 /* ViewController.swift in Sources */,
+				325402461A90C5B9000381D3 /* InfoViewController.swift in Sources */,
 				325402261A8FA33A000381D3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

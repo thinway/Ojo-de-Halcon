@@ -84,6 +84,9 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="lYn-ZG-Bx7" kind="modal" modalTransitionStyle="flipHorizontal" id="A9k-C5-hqr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jux-Rd-wYh">
                                 <rect key="frame" x="32" y="236" width="60" height="30"/>
@@ -108,6 +111,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="181" y="344"/>
+        </scene>
+        <!--Info View Controller-->
+        <scene sceneID="8xi-yA-M7o">
+            <objects>
+                <viewController id="lYn-ZG-Bx7" customClass="InfoViewController" customModule="OjoDeHalcon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hkz-ED-kP4"/>
+                        <viewControllerLayoutGuide type="bottom" id="Its-hD-iKc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Co-Mt-6eR">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2A-2m-HR0">
+                                <rect key="frame" x="261" y="254" width="43" height="30"/>
+                                <state key="normal" title="Cerrar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cerrarPantallaInfo" destination="lYn-ZG-Bx7" eventType="touchUpInside" id="443-oo-du7"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qnG-VT-jO6">
+                                <rect key="frame" x="16" y="20" width="536" height="213"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">*** Ojo de Halcón ***
+
+Bienvenido al maravilloso juego Ojo de Halcón donde podrás demostrar que tienes la vista más privilegiada a este lado del Pecos. Podrás ganar puntos y mucha fama arrastrando el slider hasta el infinito y más allá.
+
+Tu objetivo es poner el slider en la cantidad numérica que te propone el juego. Lo más cerca posible. Si aciertas tendrás un bonus de 100 puntos!!! Pero no te quedes muy lejos pues el iDevice te castigará con una descarga de miles de voltios sobre tus ojos de escayola.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cWi-ua-Tek" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1019" y="344"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
