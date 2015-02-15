@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        iniciarNuevaRonda()
+        iniciarNuevoJuego()
         actualizarLabels()
     }
 
@@ -33,36 +33,64 @@ class ViewController: UIViewController {
 
     @IBAction func showAlert() {
         let diferencia = abs(valorGenerado - valorActual)
-        let puntos = 100 - diferencia
+        var puntos = 100 - diferencia
+        
+        var titulo: String
+        if diferencia == 0 {
+            titulo = "Impresionante!"
+            puntos += 100
+        } else if diferencia < 5 {
+            titulo = "Muy cerca!"
+            if diferencia == 1 {
+                puntos += 75
+            }else{
+                puntos += 50
+            }
+        } else if diferencia < 10 {
+            titulo = "Se puede mejorar"
+        } else if diferencia < 30 {
+            titulo = "Sabes cómo se juega?"
+        } else {
+            titulo = "Búscate un oculista"
+        }
         
         puntuacion += puntos
         
         let message = "Has conseguido \(puntos) puntos."
+                      + "\nEl valor que has puesto es: \(valorActual)"
         
-//        let message = "El valor del slide es: \(valorActual)"
 //            + "\nEl valor generado es: \(valorGenerado)"
 //            + "\nLa diferencia es \(diferencia)"
         
-        let alert = UIAlertController(title: "Hola K Ase", message: message, preferredStyle: .Alert)
+        let alert = UIAlertController(title: titulo, message: message, preferredStyle: .Alert)
         
-        let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        let action = UIAlertAction(title: "OK", style: .Default,
+                            handler: { action in
+                                self.iniciarNuevaRonda()
+                                self.actualizarLabels()
+                        })
         
         alert.addAction(action)
         
         presentViewController(alert, animated: true, completion: nil)
         
-        iniciarNuevaRonda()
-        actualizarLabels()
+//        iniciarNuevaRonda()
+//        actualizarLabels()
     }
     
     @IBAction func sliderMoved(slider: UISlider) {
         valorActual = lroundf(slider.value)
     }
     
+    @IBAction func reiniciarJuego() {
+        iniciarNuevoJuego()
+        actualizarLabels()
+    }
+    
     func iniciarNuevaRonda() {
         ronda += 1
         valorGenerado = 1 + Int(arc4random_uniform(100))
-        //valorActual = 50
+        valorActual = 50
         slider.value = Float(valorActual)
     }
     
@@ -70,6 +98,12 @@ class ViewController: UIViewController {
         valorLabel.text = String(valorGenerado)
         puntuacionLabel.text = String(puntuacion);
         rondaLabel.text = String(ronda)
+    }
+    
+    func iniciarNuevoJuego() {
+        puntuacion = 0
+        ronda = 0
+        iniciarNuevaRonda()
     }
 }
 
