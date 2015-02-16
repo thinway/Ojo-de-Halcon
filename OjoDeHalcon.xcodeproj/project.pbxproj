@@ -11,9 +11,11 @@
 		325402281A8FA33A000381D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325402271A8FA33A000381D3 /* ViewController.swift */; };
 		3254022B1A8FA33A000381D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325402291A8FA33A000381D3 /* Main.storyboard */; };
 		3254022D1A8FA33A000381D3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3254022C1A8FA33A000381D3 /* Images.xcassets */; };
-		325402301A8FA33A000381D3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3254022E1A8FA33A000381D3 /* LaunchScreen.xib */; };
 		3254023C1A8FA33A000381D3 /* OjoDeHalconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3254023B1A8FA33A000381D3 /* OjoDeHalconTests.swift */; };
 		325402461A90C5B9000381D3 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325402451A90C5B9000381D3 /* InfoViewController.swift */; };
+		325402481A911CB9000381D3 /* OjoDeHalcon.html in Resources */ = {isa = PBXBuildFile; fileRef = 325402471A911CB9000381D3 /* OjoDeHalcon.html */; };
+		3254024B1A912629000381D3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 325402491A912629000381D3 /* Default-568h@2x.png */; };
+		3254024C1A912629000381D3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3254024A1A912629000381D3 /* Default@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,11 +35,13 @@
 		325402271A8FA33A000381D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3254022A1A8FA33A000381D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3254022C1A8FA33A000381D3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		3254022F1A8FA33A000381D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		325402351A8FA33A000381D3 /* OjoDeHalconTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OjoDeHalconTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3254023A1A8FA33A000381D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3254023B1A8FA33A000381D3 /* OjoDeHalconTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OjoDeHalconTests.swift; sourceTree = "<group>"; };
 		325402451A90C5B9000381D3 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		325402471A911CB9000381D3 /* OjoDeHalcon.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = OjoDeHalcon.html; sourceTree = "<group>"; };
+		325402491A912629000381D3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		3254024A1A912629000381D3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,12 +83,14 @@
 		325402221A8FA33A000381D3 /* OjoDeHalcon */ = {
 			isa = PBXGroup;
 			children = (
+				325402491A912629000381D3 /* Default-568h@2x.png */,
+				3254024A1A912629000381D3 /* Default@2x.png */,
+				325402471A911CB9000381D3 /* OjoDeHalcon.html */,
 				325402251A8FA33A000381D3 /* AppDelegate.swift */,
 				325402271A8FA33A000381D3 /* ViewController.swift */,
 				325402291A8FA33A000381D3 /* Main.storyboard */,
 				325402451A90C5B9000381D3 /* InfoViewController.swift */,
 				3254022C1A8FA33A000381D3 /* Images.xcassets */,
-				3254022E1A8FA33A000381D3 /* LaunchScreen.xib */,
 				325402231A8FA33A000381D3 /* Supporting Files */,
 			);
 			path = OjoDeHalcon;
@@ -196,7 +202,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3254022B1A8FA33A000381D3 /* Main.storyboard in Resources */,
-				325402301A8FA33A000381D3 /* LaunchScreen.xib in Resources */,
+				3254024B1A912629000381D3 /* Default-568h@2x.png in Resources */,
+				3254024C1A912629000381D3 /* Default@2x.png in Resources */,
+				325402481A911CB9000381D3 /* OjoDeHalcon.html in Resources */,
 				3254022D1A8FA33A000381D3 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,14 +254,6 @@
 				3254022A1A8FA33A000381D3 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		3254022E1A8FA33A000381D3 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3254022F1A8FA33A000381D3 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

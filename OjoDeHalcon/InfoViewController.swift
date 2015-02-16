@@ -10,10 +10,16 @@ import UIKit
 
 class InfoViewController: UIViewController {
 
+    @IBOutlet weak var infoWebView: UIWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if let htmlFile = NSBundle.mainBundle().pathForResource("OjoDeHalcon", ofType: "html") {
+            let htmlData = NSData(contentsOfFile: htmlFile)
+            let baseURL = NSURL.fileURLWithPath(NSBundle.mainBundle().bundlePath)
+            infoWebView.loadData(htmlData, MIMEType: "text/html", textEncodingName: "UTF-8", baseURL: baseURL)
+        }
     }
 
     override func didReceiveMemoryWarning() {
